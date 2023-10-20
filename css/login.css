@@ -1,0 +1,49 @@
+* {
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box;
+ }
+ 
+ @font-face {
+     font-family: 'Codec';
+     src: url(/fonts/codec-pro-bold.ttf) format('truetype');
+     font-weight: normal;
+     font-style: normal;
+   }
+ 
+ body{
+     background-color: #ff7621;
+     height:100vh;
+    padding: 40px 0 0 0;
+ }
+ 
+ footer{
+     height: 10%;
+     width: 100vw;
+     background-color: black;
+     color: #FFF;
+     padding: 15px;
+     font-family: system-ui, -apple-system, Helvetica Neue, Arial, sans-serif, ;
+     font-size: 8px;
+ }
+ 
+ div {
+     display: flex;
+ }
+
+ #principal {
+    flex-direction: column;
+    width: 400px;
+    margin: auto;
+    padding: 45px 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFF;
+    color: #fa6000;
+    border-radius: 30px;
+    height: 80%;
+ }
+
+#principal > svg {
+    width: 90px;
+}
