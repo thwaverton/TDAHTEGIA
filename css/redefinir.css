@@ -75,7 +75,7 @@ form {
 
 button {
     background-color: #fa6000;
-    color: #FFF;
+    color: #fff;
     border: none;
     border-radius: 10px;
     font-size: 1.5rem;
@@ -116,7 +116,7 @@ button {
     font-size: 1.8rem;
 }
 
-#texto{
+#texto, #texto2{
     color: #FFF;
     font-weight: bold;
     font-family: Codec,'Arial Narrow Bold', sans-serif;
@@ -127,9 +127,12 @@ button {
 
 #texto2 {
     color: #ff7621;
-    font-family: Codec,'Arial Narrow Bold', sans-serif;
     font-size: 1.8rem;
     text-align: center;
+    line-height: 1.8rem;
+    text-shadow: none;
+    font-family: Alatsi;
+    font-weight: 500;
 }
 
  hr {

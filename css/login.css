@@ -125,3 +125,16 @@ button {
     width: 90%;
     margin-inline: auto;
 }
+
+.voltar {
+    color: #FFF;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    font-size: 3rem;
+    font-variation-settings:
+      'FILL' 0,
+      'wght' 1000,
+      'GRAD' 300,
+      'opsz' 0
+}
