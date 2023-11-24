@@ -1,0 +1,69 @@
+<!-- Indica que o documento é um arquivo HTML. -->
+<!DOCTYPE html>
+
+<!-- Define a linguagem do conteúdo da página. -->
+<html lang="pt-br">
+
+<!-- Armazena informações sobre a página. -->
+<head>
+
+	<!-- Conjunto de caracteres que contém acentuação e ç. -->
+	<meta charset="utf-8">
+
+	<!-- Configuração da janela de visualização ( responsividade ). -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Importação do arquivo CSS. -->
+	<link rel="stylesheet" type="text/css" href="css/inicio.css">
+<!-- Script fonte -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+	<!-- Título da aba do navegador -->
+	<title>Layout</title>
+</head>
+
+<!-- Conteúdo apresentado na tela. -->
+<body>
+
+	<!-- Agrupa os elementos que compõe o cabeçalho. -->
+	<header class="header">
+		<a href="./inicio.html" id="logo">			
+			<img src="img/logopng.png" width="60px" alt="Logo TDAHTÉGIA">
+			<span style="margin-left: 7px; vertical-align: 10px; color: white; " id="logol">TDAHTÉGIA</span>
+		</a>
+		<a href="#" class="usuario">
+			<span style="margin-right: 10px;">Perfil</span>
+			<img src="img/perfil-de-usuario.png" width="45px" alt="perfil-de-usuario">
+		  </a>
+		<button id="openMenu">&#9776;</button>
+	</header>
+
+	<!-- Agrupa links de navegação no site. -->
+	<nav id="menu">
+
+		<button id="closeMenu">X</button>
+		<a href="#">Comunidade</a>
+		<a href="#">Calendário</a>
+		<a href="#">Material de estudo</a>
+		<a href="">Plano de ensino</a>
+		
+		<div class="search-box">
+			<input class="search-txt" type="text" name="" placeholder="Buscar">
+			<div class="search-btn"><i class="fas fa-search"></i></div>
+		</div>
+	</nav>
+
+	<!-- Agrupa o conteúdo principal da página ou aplicação. -->
+	<main>Main</main>
+
+	<!-- Agrupa informações e links relacionado ao conteúdo principal. -->
+	<aside>Aside</aside>
+
+	<!-- Agrupa informações de autoria, direitos autorais, contato, 
+		   mapa do site, links e documento relacionados. -->
+	<footer>Footer</footer>
+
+	<!-- Importação do arquivo JavaScript. -->
+	<script type="text/javascript" src="assets/js/script.js"></script>
+</body>
