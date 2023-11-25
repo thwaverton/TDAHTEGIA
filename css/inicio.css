@@ -145,7 +145,7 @@ main, aside, footer {
 	/* Torna o elemento um flex container          */
 	/* e os seus elementos internos em flex-itens. */
 	display: flex;
-
+	height: 600px;
 	/* Margem externa de todos os lados. */
 	margin:1px ;
 }
