@@ -13,7 +13,10 @@
 }
 
 body{
-    background-color: #ff7621;
+    background-image:linear-gradient(to left, transparent, #ff7621, #ff7621), url(https://img.quizur.com/f/img5f0c80e0bd9d08.31973740.jpg?lastEdited=1594654954);
+    background-repeat: no-repeat;
+    background-size: cover;
+
     height:100vh;
 }
 
@@ -61,14 +64,10 @@ svg {
 .botao {
     background-color: #FFF;
     border-radius: 150px;
-    width: 150px;
+    min-width: 150px;
     padding: 15px;
     text-align: center;
     margin: auto 0
-}
-
-#botao2{
-    align-self: start;
 }
 
 a {
@@ -80,18 +79,11 @@ a {
     font-weight: 550;
 }
 
-#imagem{
-    background-image: url(https://img.quizur.com/f/img5f0c80e0bd9d08.31973740.jpg?lastEdited=1594654954);
-    width: 250px;
-    height: 250px;
-    background-size: 250px 250px;
-    border-radius: 20px;
-}
-
 #principal{
     height: 90%;
     flex-direction: column;
     padding: 20px 60px;
+    justify-content: space-between;
 }
 
 .row{
@@ -101,4 +93,12 @@ a {
 #fila2{
     flex: 1;
     align-items: center;
+}
+
+#fila1{
+    flex-wrap: wrap;
+}
+
+.botoes {
+    gap: 10px;
 }

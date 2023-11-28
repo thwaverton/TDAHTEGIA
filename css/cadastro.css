@@ -5,10 +5,11 @@
  }
  
  @font-face {
-     font-family: 'Codec';
-     src: url(/fonts/codec-pro-bold.ttf) format('truetype');
-     font-weight: normal;
-     font-style: normal;
+    font-family: 'Codec';
+    src: local('codec pro bold'), local('codec-pro-bold'),
+    url(/fonts/codec-pro-bold.ttf) format('truetype');
+    font-weight: 700;
+    font-style: normal;
    }
 
  body{
@@ -60,6 +61,7 @@ svg {
 
 #texto {
     color: #FFF;
+    font-weight: 600;
     font-family: Codec,'Arial Narrow Bold', sans-serif;
     font-size: 5.3rem;
     text-shadow: rgba(0, 0, 0, 0.3) 0px 3px 4px;
