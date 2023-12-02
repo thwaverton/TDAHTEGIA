@@ -118,8 +118,7 @@ nav a:hover {
 .search-btn {
 	color: #3742fa;
 	float: right;
-	width: 40px;
-	height: 40px;
+    padding: 10px;
 	border-radius: 50%;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
@@ -153,7 +152,18 @@ nav a:hover {
 	color: white; /* Cor do texto do placeholder */
   }
   
-
+.profile {
+	width: 50px;
+	height: 50px;
+	border-radius: 100px;
+	border: solid white 3px;
+	align-self: center;
+	background-image: url(/img/profile-round-1342-svgrepo-com.svg);
+	background-color: #bababa;
+	background-size: 32px;
+	background-repeat: no-repeat;
+	background-position: center;
+ } 
 
 /* Formatação comum entre os elementos. */
 main, aside, footer {
@@ -175,7 +185,7 @@ header {
 	background: #FF7621;
 	display: flex;
 	/* Altura do elemento. */
-	height: 70px;
+	height: 90px;
 
 	/* Junção de flex-grow, flex-shrink e flex-basis.  */
 	/* flex-grow – Habilidade de um flex item crescer. */
@@ -186,6 +196,8 @@ header {
 	justify-content: space-between;
 		/* Ajuste fonte */
 	font-weight: 800;
+
+	padding-inline: 20px;
 }
 
 
@@ -305,6 +317,12 @@ a {
 
 	/* Definir a cor da fonte para o padrão do elemento pai. */
 	color: inherit;
+
+	font-family: Kanit,'Arial Narrow Bold', sans-serif;
+
+	font-weight: 500;
+
+	line-height: 100%;
 }
 
 /* Altera o estilo dos elementos para serem apresentados */ 
@@ -329,6 +347,11 @@ a {
 		/* Espaço a esquerda será preenchido automaticamente
 		   colocando os itens a direita. */
 		margin-left: auto;
+	}
+
+	.profile {
+
+		display: none;
 	}
 
 	#closeMenu {
