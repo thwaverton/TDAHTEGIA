@@ -103,3 +103,11 @@ a {
 .botoes {
     gap: 10px;
 }
+
+#barra {
+    font-family:  Georgia, 'Times New Roman', Times, serif;
+}
+
+.show {
+    visibility: hidden;
+}

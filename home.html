@@ -6,7 +6,7 @@
     <title>TDAHTÉGIA</title>
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alatsi|Kanit">
-</head>
+   
 </head>
 <body>
 
@@ -55,7 +55,7 @@ l-33 11 0 144 c0 79 4 144 8 144 5 0 69 -16 143 -35 703 -180 1262 -213 1867
     </div>
 
     <div id="fila2" class="row">
-        <p id="texto" style="grid-area: t;">Uma<br>estratégia<br>para <span id="textojs">o TDAH</span></p>
+        <p id="texto" style="grid-area: t;">Uma<br>estratégia<br>para <span id="textojs">o TDAH</span><span id="barra">|</span></p>
 
     </div>
         
@@ -65,6 +65,55 @@ l-33 11 0 144 c0 79 4 144 8 144 5 0 69 -16 143 -35 703 -180 1262 -213 1867
     <footer>
         <h1>TDAHTÉGIA&copy;2022-2023</h1>
     </footer>
+    <script>
+        function pisca() {
+            var cursor = document.getElementById('barra');
+
+            setInterval(function() {
+                cursor.classList.toggle("show");
+            }, 500); 
+        }
+
+        function escreve() {
+            var texto = document.getElementById('textojs');
+            const textos = ['o TDAH', 'o estudo', 'você!'];
+            let index = 0;
+
+            setInterval(function () {
+                if (index == 2) {
+                    index = 0;
+                } else {
+                    index += 1;
+                }
+
+                let i = 0;
+
+                let eraseInterval = setInterval(function () {
+                    if (i <= textos[index].length) {
+                        texto.innerHTML = textos[index].substring(0, i);
+                        i += 1;
+                    } else {
+                        clearInterval(eraseInterval);
+
+                        let typeInterval = setInterval(function () {
+                            if (i <= textos[index].length) {
+                                texto.innerHTML = textos[index].substring(0, i);
+                                i += 1;
+                            } else {
+                                clearInterval(typeInterval);
+                            }
+                        }, 100);
+                    }
+                }, 100);
+
+            }, 2000);
+        }
+
+        escreve();
+        pisca();
+        
+
+    </script>
     
     
 </body>
