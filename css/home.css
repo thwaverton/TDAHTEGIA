@@ -1,113 +1,115 @@
 * {
-   padding: 0; 
-   margin: 0;
-   box-sizing: border-box;
-}
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box;
+ }
+ 
+ @font-face {
+     font-family: 'Codec';
+     src: local('codec pro bold'), local('codec-pro-bold'),
+     url(/fonts/codec-pro-bold.ttf) format('truetype');
+     font-weight: 700;
+     font-style: normal;
+ }
+ 
+ body{
+     background-image: url(../img/home.png);
+     background-repeat: no-repeat;
+     background-size: cover;
+     overflow: auto;
+     height:100vh;
+ }
 
-@font-face {
-    font-family: 'Codec';
-    src: local('codec pro bold'), local('codec-pro-bold'),
-    url(/fonts/codec-pro-bold.ttf) format('truetype');
-    font-weight: 700;
-    font-style: normal;
-}
+ header{
+    background: #FF7621;
+	display: flex;
+	/* Altura do elemento. */
+	height: 70px;
 
-body{
-    background-image:linear-gradient(to left, transparent, #ff7621, #ff7621), url(https://img.quizur.com/f/img5f0c80e0bd9d08.31973740.jpg?lastEdited=1594654954);
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-    background-position: right;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
+	/* Junção de flex-grow, flex-shrink e flex-basis.  */
+	/* flex-grow – Habilidade de um flex item crescer. */
+	/* flex-shrink - Capacidade de redução do item.    */
+	/* flex-basis – Tamanho inicial do item.           */
+	flex: 1 1 100vw;
 
-footer{
-    width: 100vw;
-    background-color: black;
-    color: #FFF;
-    padding: 15px;
-    font-family: system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
-    font-size: 8px;
-}
+	justify-content: space-between;
+		/* Ajuste fonte */
+	font-weight: 800;
+ }
+ 
+ div {
+     display: flex;
+ }
+ 
+ 
+ #texto{
+     color: #FFF;
+     font-weight: bold;
+     font-family: Codec,'Arial Narrow Bold', sans-serif;
+     font-size: 5.3rem;
+     text-shadow: rgba(0, 0, 0, 0.3) 0px 3px 4px;
+     line-height: 5rem;
+ }
+ 
+ .botao {
+     min-width: 150px;
+     padding: 15px;
+     text-align: center;
+     margin: auto 0;
+     font-family: 'Roboto Slab', serif;
+     font-size: 20px;
+     color: #FFF;
+     
+ }
 
-div {
-    display: flex;
-}
-
-#logo {
-    display: flex;
-    color: #FFF;
-    font-weight: bold;
-    font-family: system-ui,Alatsi,'Arial Narrow Bold', sans-serif;
-    font-size: 35px;
-    align-items: center;
-    cursor: pointer;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
-
-svg {
-    width: 100px;
-    margin-bottom: 15px;
-    margin-right: 7px;
-}
-
-#texto{
-    color: #FFF;
-    font-weight: bold;
-    font-family: Codec,'Arial Narrow Bold', sans-serif;
-    font-size: 6.3rem;
-    text-shadow: rgba(0, 0, 0, 0.3) 0px 3px 4px;
-    line-height: 6rem;
-}
-
-.botao {
-    background-color: #FFF;
-    border-radius: 150px;
+ #botao2 {
+    border: 2px solid#fff;
+    border-radius: 100px;
     min-width: 150px;
-    padding: 15px;
+    padding: 8px;
     text-align: center;
-    margin: auto 0
+    margin: auto 0;
+    font-family: 'Roboto Slab', serif;
+    margin-right: 30px;
+
 }
 
-a {
-    text-decoration: none;
-    color: black;
-    font-size: 1.5rem;
-    text-wrap: nowrap;
-    font-family: Alatsi,'Arial Narrow Bold', sans-serif;
-    font-weight: 550;
+#botao2:hover{
+    background-color: #FF914D;
+    font-size: 22px;
 }
 
-#principal{
-    flex-direction: column;
-    flex: 1;
+#botao3{
+    margin-right: 30px;
 }
 
-.row{
-    justify-content: space-between;
-    padding: 10px 40px;
+#botao1:hover, #botao3:hover{
+    font-size: 22px;
 }
 
-#fila2{
-    align-items: center;
-    flex:1
-}
+ 
+ a {
+     text-decoration: none;
+ }
+ 
+ #principal{
+     height: 90%;
+     flex-direction: column;
+     padding: 20px 60px;
+     justify-content: space-between;
+ }
+ 
+ .row{
+     justify-content: space-between;
+ }
+ 
+nav{
+    height: 15px;
+    width: 100%;
+    background-color: #FF914D;
 
-#fila1{
-    flex-wrap: wrap;
-    background-color: #2e2e2e11;
 }
-
-.botoes {
-    gap: 10px;
-}
-
-#barra {
-    font-family:  Georgia, 'Times New Roman', Times, serif;
-}
-
-.show {
-    visibility: hidden;
-}
+ 
+ .botoes {
+     gap: 10px;
+ }
