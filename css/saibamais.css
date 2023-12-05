@@ -86,10 +86,16 @@ h1{
 
 img{
     width: 150px;
+    border-radius: 30px;
+    border: solid px #ff7621;;
 }
 
 p{
     text-align: justify;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 15px;
+}
+
+#text p{
+    font-size: 20px;
 }
