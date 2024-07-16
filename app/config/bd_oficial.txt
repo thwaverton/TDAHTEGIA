@@ -1,0 +1,120 @@
+
+CREATE DATABASE tdahtegia;
+
+USE tdahtegia;
+
+CREATE TABLE especialidade
+
+(tipo VARCHAR(40) PRIMARY KEY ,
+descricao VARCHAR(40) NOT NULL);
+
+CREATE TABLE comunidades
+
+(idcomunidade INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR (50) NOT NULL,
+descricao VARCHAR(100));
+
+CREATE TABLE plano_de_estudo
+
+(idplano_de_estudo INT PRIMARY KEY AUTO_INCREMENT,
+titulo VARCHAR(50) NOT NULL,
+descricao VARCHAR(100),
+categoria VARCHAR(50) NOT NULL);
+
+CREATE TABLE especialista
+
+(idespecialista INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(50) NOT NULL,
+cpf VARCHAR (11) NOT NULL,
+genero VARCHAR (2) NOT NULL,
+data_nasc DATE NOT NULL,
+email VARCHAR (50) NOT NULL,
+descricao VARCHAR(100));
+
+CREATE TABLE telefone_especialista
+
+(idtelefone INT PRIMARY KEY AUTO_INCREMENT,
+ntelefone VARCHAR (50) NOT NULL,
+idespecialista INT NOT NULL,
+FOREIGN KEY (idespecialista) REFERENCES especialista (idespecialista));
+
+CREATE TABLE portador
+
+(idportador INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(40) NOT NULL,
+cpf VARCHAR(11) NOT NULL,
+genero VARCHAR(2) NOT NULL,
+data_nasc DATE NOT NULL,
+email VARCHAR(50) NOT NULL,
+descricao VARCHAR(100),
+fk_idportador INT,
+FOREIGN KEY (fk_idportador) REFERENCES portador (idportador));
+
+CREATE TABLE especialista_especialidade
+
+(tipo VARCHAR(40),
+idespecialista INT,
+PRIMARY KEY (tipo, idespecialista),
+FOREIGN KEY (tipo) REFERENCES especialidade (tipo),
+FOREIGN KEY (idespecialista) REFERENCES especialista (idespecialista));
+
+CREATE TABLE comunidade_portador
+
+(idcomunidade INT,
+idportador INT,
+PRIMARY KEY (idcomunidade, idportador),
+FOREIGN KEY (idcomunidade) REFERENCES comunidades (idcomunidade),
+FOREIGN KEY (idportador) REFERENCES portador (idportador));
+
+CREATE TABLE portador_planos
+
+(idportador INT,
+idplano_de_estudo INT,
+PRIMARY KEY (idportador, idplano_de_estudo),
+FOREIGN KEY (idportador) REFERENCES portador (idportador),
+FOREIGN KEY (idplano_de_estudo) REFERENCES plano_de_estudo (idplano_de_estudo));
+
+CREATE TABLE telefone_portador
+
+(idtelefone INT PRIMARY KEY AUTO_INCREMENT,
+ntelefone VARCHAR (50) NOT NULL,
+idportador INT NOT NULL,
+FOREIGN KEY (idportador) REFERENCES portador (idportador));
+
+CREATE TABLE chat 
+
+(identificador INT PRIMARY KEY AUTO_INCREMENT,
+avaliacao VARCHAR(50),
+denuncia VARCHAR(50),
+idportador INT,
+idespecialista INT,
+FOREIGN KEY (idportador) REFERENCES portador (idportador),
+FOREIGN KEY (idespecialista) REFERENCES especialista (idespecialista));
+
+CREATE TABLE postagens 
+
+(idpostagem INT PRIMARY KEY AUTO_INCREMENT,
+data_envio DATE NOT NULL,
+hora_envio TIME NOT NULL,
+idcomunidade INT,
+idportador INT,
+idespecialista INT,
+FOREIGN KEY (idcomunidade) REFERENCES comunidades (idcomunidade),
+FOREIGN KEY (idportador) REFERENCES portador (idportador),
+FOREIGN KEY (idespecialista) REFERENCES especialista (idespecialista));
+
+CREATE TABLE mensagens
+
+(conteudo VARCHAR(100) NOT NULL,
+data_envio DATE NOT NULL,
+hora_envio TIME NOT NULL,
+idportador INT,
+idespecialista INT,
+idpostagem INT,
+identificador INT,
+idcomunidade INT,
+FOREIGN KEY (idportador) REFERENCES portador (idportador),
+FOREIGN KEY (idespecialista) REFERENCES especialista (idespecialista),
+FOREIGN KEY (idpostagem) REFERENCES postagens (idpostagem),
+FOREIGN KEY (identificador) REFERENCES chat (identificador),
+FOREIGN KEY (idcomunidade) REFERENCES comunidades (idcomunidade));
