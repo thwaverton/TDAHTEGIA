@@ -128,3 +128,24 @@ h1 {
       'GRAD' 300,
       'opsz' 0
 }
+
+@media only screen and (max-width: 768px) {
+    #principal{
+        height: 100vh;
+        border-radius: 0;
+    }
+
+    form{
+        justify-content: center;
+        align-items: center;
+        gap: 35px
+    }
+
+    #branco{
+        display:none
+    }
+
+    #caixatexto{
+        width: 100%;
+    }
+}

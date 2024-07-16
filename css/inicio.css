@@ -84,46 +84,11 @@ nav a:hover {
 	margin-right: 15px;
 	
   }
- /*Não remove essa barra */  */
-.search-box {
-	position: flex;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	-webkit-transform: translate(-50%, -50%);
-	-moz-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	-o-transform: translate(-50%, -50%);
-	background: #1e272e;
-	height: 40px;
-	border-radius: 40px;
-	-webkit-border-radius: 40px;
-	-moz-border-radius: 40px;
-	-ms-border-radius: 40px;
-	-o-border-radius: 40px;
-	padding: 10px;
-	/* transition: background-color 0.2s, width 0.4s, padding 0.4s; */
-}
-
-.search-box:hover > .search-txt {
-	width: 120px; 
-	background:none;
-}
-
-.search-box:hover > .search-btn {
-	background: white;
-	border: 2px solid greenyellow;
-}
 
 .search-btn {
 	color: #3742fa;
-	float: right;
     padding: 10px;
-	border-radius: 50%;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	-ms-border-radius: 50%;
-	-o-border-radius: 50%;
+	border-radius: 100%;
 	background: white;
 	display: flex;
 	justify-content: center;
@@ -166,7 +131,7 @@ nav a:hover {
  } 
 
 /* Formatação comum entre os elementos. */
-main, aside, footer {
+main, aside {
 	/* Cor do fundo. */
 	/* background: #FF7621; */
 	background: gray;
@@ -174,9 +139,8 @@ main, aside, footer {
 	/* Torna o elemento um flex container          */
 	/* e os seus elementos internos em flex-itens. */
 	display: flex;
-	height: 900px;
+	min-height: 900px;
 	/* Margem externa de todos os lados. */
-	margin:1px ;
 }
 
 /* Seletores para formatação individual. */
@@ -301,15 +265,23 @@ aside {
 }
 
 footer {
-	/* Altura do elemento. */
-	height: 200px;
-
-	/* Junção de flex-grow, flex-shrink e flex-basis.  */
-	/* flex-grow – Habilidade de um flex item crescer. */
-	/* flex-shrink - Capacidade de redução do item.    */
-	/* flex-basis – Tamanho inicial do item.           */
-	flex: 1 1 100vw;
+	background-image: linear-gradient(#FF914D, #FF7621);
+    height: 80px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    bottom: 0px
 }
+
+#textobaixo {
+    font-family: Kaniti,'Arial Narrow Bold', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #FFF; 
+    margin-left: 30px;
+    text-shadow: rgba(0, 0, 0, 0.4) 1px 1px 4px;
+ }
 
 a {
 	/* Remove a decoração padrão do elemento. */

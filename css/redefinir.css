@@ -140,3 +140,29 @@ button {
     border-top: 10px dotted #fff;
     border-bottom: none;
  }
+
+ #base{
+    display: none;
+ }
+
+ @media only screen and (max-width: 768px) {
+    #tela{
+        flex-direction: column;
+    }
+
+    #direito{
+        flex:3
+    }
+
+    #texto{
+        display: none;
+    }
+
+    #base{
+        display: flex;
+        background-color: #ff7621;
+        flex: 1;
+        align-items: start;
+        padding-top: 12px;
+    }
+ }

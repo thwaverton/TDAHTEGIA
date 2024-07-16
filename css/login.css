@@ -37,7 +37,7 @@
     accent-color: #fa6000;
  }
 
- #principal {
+ #principal{
     flex-direction: column;
     width: 400px;
     margin: auto;
@@ -137,4 +137,23 @@ button {
       'wght' 1000,
       'GRAD' 300,
       'opsz' 0
+}
+
+@media only screen and (max-width: 768px) {
+    #principal{
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    body{
+        padding: 0;
+    }
+
+    .voltar{
+        color:#fa6000
+    }
 }

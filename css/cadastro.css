@@ -88,6 +88,7 @@ svg {
     height: 100%;
     flex-direction: column;
     justify-content: space-evenly;
+    gap:30px;
     align-items: center;
 }
 
@@ -111,7 +112,7 @@ button {
     color: #FFF;
     border: none;
     border-radius: 50px;
-    width: 85%;
+    width: 240px;
     font-size: 1.5rem;
     font-family: system-ui,Alatsi,'Arial Narrow Bold', sans-serif;
     font-weight: 700;
@@ -145,6 +146,12 @@ input, #principal {
     accent-color: #fa6000;
  }
 
+ #termos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+
 #links{
     flex-direction: column;
     align-items: center;
@@ -161,4 +168,31 @@ input, #principal {
       'wght' 1000,
       'GRAD' 300,
       'opsz' 0
+}
+
+@media only screen and (max-width: 768px) {
+    #texto, #info{
+        display: none
+    }
+
+    #logo, .voltar{
+        position: absolute;
+        filter: invert(54%) sepia(77%) saturate(5692%) hue-rotate(6deg) brightness(106%) contrast(101%);
+    }
+
+    #logo{
+        top:80px;
+        left: 50%;
+        translate: -50%;
+    }
+
+    #dados{
+        gap: 25px;
+        justify-content: center;
+    }
+
+    body{
+        background-color: #FFF;
+    }
+
 }

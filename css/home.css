@@ -10,29 +10,48 @@
      font-weight: 700;
      font-style: normal;
  }
+
+ html, body {
+    overflow-x: hidden;
+    /*Impede o scroll horizontal^*/
+  }
  
  body{
      background-image: url(../img/fundo.png);
      background-size: cover;
-     overflow-x: hidden;
-     height: 100vh;
-     width:100%;
+     min-height: 100vh;
      display: flex;
      flex-direction: column;
      justify-content: space-between;
+     position: relative;
  }
 
  header{
     background: #FF7621;
 	display: flex;
-	height: 70px;
 	justify-content: space-between;
-    flex-direction: row-reverse;
 	font-weight: 800;
     width:100%;
     border-bottom: solid 15px #FF914D;
+    padding: 12px;
+    flex-wrap: wrap;
  }
- 
+
+svg {
+    width: 90px;
+    cursor: pointer;
+}
+
+#logo {
+    align-items: center;
+    font-family: system-ui,Alatsi,'Arial Narrow Bold', sans-serif;
+    font-weight: 700;
+    font-size: 33px;
+    color: #FFF; 
+    margin-left: 30px;
+    gap:10px
+}
+
  div {
      display: flex;
  }
@@ -45,7 +64,7 @@
      text-shadow: rgba(0, 0, 0, 0.3) 0px 3px 4px;
      line-height: 5rem;
      color:#ee6e1f;
-     margin-left: 30px;
+     margin: 100px 0 100px 30px;
  }
 
 
@@ -76,10 +95,13 @@
  }
  
 nav{
-    height: 15px;
+    background-image: linear-gradient(#FF914D, #FF7621);
+    height: 80px;
+    display: flex;
     width: 100%;
-    background-color: #FF914D;
-
+    align-items: center;
+    position: relative;
+    bottom: 0px
 }
  
 .botoes {
@@ -92,4 +114,42 @@ nav{
     font-weight: 600;
     font-size: 20px;
     color: #FFF; 
+    margin-left: 30px;
+    text-shadow: rgba(0, 0, 0, 0.4) 1px 1px 4px;
  }
+
+ @media only screen and (max-width: 768px) {
+    .botao {
+        border: none;
+        min-width: auto;
+        margin: auto 0;
+        font-size: 17px; 
+        box-shadow: none;
+    }
+
+    .botoes {
+        gap: none;
+        margin-right: none;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    #logo {
+        margin-bottom: 7px;
+    }
+
+    svg {
+        width: 70px;
+        cursor: pointer;
+    }
+
+    #texto{
+        font-size: 60px;
+        line-height: 4rem;
+    }
+
+    header{
+        background-image: linear-gradient(#FF914D, #FF7621);
+    }
+
+}
